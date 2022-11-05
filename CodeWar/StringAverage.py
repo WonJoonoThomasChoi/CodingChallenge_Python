@@ -1,4 +1,3 @@
-# String Average
 # https://www.codewars.com/kata/5966847f4025872c7d00015b
 
 def average_string(s):
