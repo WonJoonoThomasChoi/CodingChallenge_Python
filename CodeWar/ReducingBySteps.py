@@ -1,4 +1,4 @@
-#https://www.codewars.com/users/724thomas2/completed_solutions
+#https://www.codewars.com/kata/56efab15740d301ab40002ee
 
 def gcdi(x,y):
     if y==0:
