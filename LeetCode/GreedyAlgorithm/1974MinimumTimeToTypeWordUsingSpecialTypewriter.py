@@ -1,4 +1,4 @@
-##https://leetcode.com/problems/minimum-time-to-type-word-using-special-typewriter/
+#https://leetcode.com/problems/minimum-time-to-type-word-using-special-typewriter/
 
 class Solution:
     def minTimeToType(self, word: str) -> int:
@@ -6,9 +6,8 @@ class Solution:
         ans=0
         fst = "a"
         for i in range(len(word)):
-            snd = word[i]
-            a=( abs(idx(fst)-idx(snd)) )
-            b=(26 - ( max(idx(fst),idx(snd)) - min(idx(fst),idx(snd))))
+            a=( abs(idx(fst)-idx(word[i])) )
+            b=(26 - ( max(idx(fst),idx(word[i])) - min(idx(fst),idx(word[i]))))
             ans+=min(a,b)+1
             fst=word[i]
         return ans
