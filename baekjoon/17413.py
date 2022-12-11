@@ -21,5 +21,4 @@ while i < len(word):
         word[start:i] = tmp
     else:                   # 괄호도 아니고 알파,숫자도 아닌것 = 공백
         i+=1                # 그냥 증가시킨다
-
 print("".join(word))
