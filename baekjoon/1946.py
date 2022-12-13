@@ -3,21 +3,20 @@
 import sys
 
 case = int(sys.stdin.readline())
-ans=[]
+ans = []
 for j in range(case):
-    alist=[]
-    n= int(sys.stdin.readline())
+    alist = []
+    n = int(sys.stdin.readline())
     for i in range(n):
-        alist.append(list( map(int, sys.stdin.readline().replace("\n","").split(" "))))
-    alist.sort(key = lambda x: x[0])
-    count=1
-    standard=alist[0][1]
-    for i in range(1,n):
-        if standard>alist[i][1]:
-            count+=1
-            standard=alist[i][1]
+        alist.append(list(map(int, sys.stdin.readline().replace("\n", "").split(" "))))
+    alist.sort(key=lambda x: x[0])
+    count = 1
+    standard = alist[0][1]
+    for i in range(1, n):
+        if standard > alist[i][1]:
+            count += 1
+            standard = alist[i][1]
     print(count)
-
 
 #
 # 3 6
@@ -40,5 +39,3 @@ for j in range(case):
 # 4 2
 # 7 3
 # 1 4
-
-
