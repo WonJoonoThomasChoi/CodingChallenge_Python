@@ -11,3 +11,7 @@ def fib(n):
         return adict[n]
 print(fib(n),fib(n+1))
 
+a,b=1,0
+for i in range(int(input())):
+    a,b=b,b+a
+print(a,b)
