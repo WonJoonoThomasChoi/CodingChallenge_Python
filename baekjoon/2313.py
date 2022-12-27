@@ -21,7 +21,6 @@ for i in range(case):
                 max = sum(alist[lp:rp])
                 maxl = lp
                 maxr = rp
-
             if alist[lp] > alist[rp-1]:
                 rp -= 1
             elif alist[lp] < alist[rp-1]:
@@ -29,9 +28,9 @@ for i in range(case):
             else:
                 if alist[lp] + alist[lp + 1] > alist[rp - 1] + alist[rp - 2]:
                     rp -= 1
-                elif alist[lp] + alist[lp + 1] <= alist[rp - 1] + alist[rp - 2]:
+                elif alist[lp] + alist[lp + 1] < alist[rp - 1] + alist[rp - 2]:
                     lp += 1
-            print(rp,lp)
+            # print(lp,rp)
         except:
             break
 
