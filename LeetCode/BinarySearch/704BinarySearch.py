@@ -1,0 +1,5 @@
+#https://leetcode.com/problems/binary-search/description/
+
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        return nums.index(target) if target in nums else -1
