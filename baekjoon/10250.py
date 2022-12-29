@@ -1,15 +1,5 @@
 # https://www.acmicpc.net/problem/10250
 
-#cases = int(input())
-
-'''
-10 10 100
-10 10 99
-
-1010
-910
-'''
-
 for i in range(int(input())):
     h, w, n = map(int, input().split())
     room = n//h + 1
