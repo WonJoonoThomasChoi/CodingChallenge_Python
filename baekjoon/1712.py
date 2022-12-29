@@ -1,10 +1,14 @@
 # https://www.acmicpc.net/problem/1712
-
-nums = list(map(int, input().split()))
-diff=nums[2]-nums[1]
-if diff<=0:
-    print(-1)
-elif nums[0]<=0:
-    print (0)
-else:
-    print (int(nums[0] / diff)+1)
+'''
+2 8 20 38
+ 6 12 18
+'''
+n = int(input())
+alist = [1]
+temp=alist[0]
+count=1
+while temp<n:
+    temp=alist[-1]+(6*count)
+    alist.append(temp)
+    count+=1
+print(len(alist))
