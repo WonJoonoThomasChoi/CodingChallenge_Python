@@ -1,25 +1,21 @@
 # https://www.acmicpc.net/problem/2999
 
 import sys
-txt = sys.stdin.readline().rstrip()
-n = len(txt)
-maxR = 0
-for i in range(1,n+1):
-    for j in range(1,i+1):
-        if i*j == n:
-            if i >= j:
-                maxR = max(maxR,j)
-maxC = n//maxR
-print(maxR,maxC)
-alist = [["" for x in range(maxR)] for y in range(maxC)]
-print(alist)
-count=0
-for i in range(maxC):
-    for j in range(maxR):
-        alist[i][j] = txt[count]
-        count+=1
-print(alist)
+n = sys.stdin.readline().rstrip()
+l = len(n)
+for r in range(l+1):
+    for c in range(r,l+1):
+        if r*c == l:
+            R=r
+            C=c
 
-for i in range(maxR):
-    for j in range(maxC):
-        print(alist[j][i],end="")
+alist = [["" for x in range(C)] for y in range(R)]
+count=0
+for i in range(C):
+    for j in range(R):
+        alist[j][i] = n[count]
+        count+=1
+
+for i in range(R):
+    for j in range(C):
+        print(alist[i][j],end="")
