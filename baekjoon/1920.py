@@ -1,6 +1,12 @@
 # https://www.acmicpc.net/problem/1920
 
 import sys
+numbers = set()
+noneed1, save_numbers, noneed2, check_numbers = input(), list(map(int, sys.stdin.readline().split())), input(), list(map(int, sys.stdin.readline().split()))
+for save_number in save_numbers:
+    numbers.add(save_number)
+for check_number in check_numbers:
+    print(1 if check_number in numbers else 0)
 
 
 def binarySearch(alist, target):
@@ -23,6 +29,8 @@ m = int(sys.stdin.readline())
 blist = list(map(int, sys.stdin.readline().split()))
 for i in blist:
     print(binarySearch(alist, i))
+
+
 
 
 
