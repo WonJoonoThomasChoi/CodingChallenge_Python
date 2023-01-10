@@ -1,5 +1,12 @@
 # https://leetcode.com/problems/design-hashmap/description/
-
+'''
+1. 아이디어 :
+    1) 딕셔너리를 만들고, get과 remove는 try - catch로 예외 처리
+2. 시간복잡도 :
+    1) O(1)
+3. 자료구조 :
+    1) 딕셔너리
+'''
 class MyHashMap:
 
     def __init__(self):
